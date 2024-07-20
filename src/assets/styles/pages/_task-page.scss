@@ -1,0 +1,14 @@
+@import "../abstracts/colors";
+
+.main-tasks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 583px;
+  height: 758px;
+  padding: 50px;
+
+  border: 2px solid $primary-color;
+  border-radius: 20px;
+}

@@ -1,7 +1,12 @@
 import React from "react";
+import TaskPage from "./pages/TaskPage";
 
 function App() {
-  return <div>App</div>;
+  return (
+    <main>
+      <TaskPage />
+    </main>
+  );
 }
 
 export default App;
