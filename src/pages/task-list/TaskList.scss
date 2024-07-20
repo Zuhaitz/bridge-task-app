@@ -1,4 +1,4 @@
-@import "../abstracts/colors";
+@import "../../assets/styles/abstracts/colors";
 
 .main-tasks {
   display: flex;
@@ -11,4 +11,6 @@
 
   border: 2px solid $primary-color;
   border-radius: 20px;
+
+  background-color: $background-color;
 }

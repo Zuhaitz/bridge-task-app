@@ -1,5 +1,5 @@
 import React from "react";
-import TaskPage from "./pages/TaskPage";
+import TaskPage from "./pages/task-list/TaskList";
 
 function App() {
   return (
