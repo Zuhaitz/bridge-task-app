@@ -3,13 +3,13 @@
   justify-content: center;
 
   &__input {
-    @include format-text;
-
     width: 381px;
     height: 40px;
     padding: 10px 0;
     padding-left: 15px;
+    margin-bottom: 60px;
 
+    @include format-text;
     @include apply-border;
 
     &::placeholder {
