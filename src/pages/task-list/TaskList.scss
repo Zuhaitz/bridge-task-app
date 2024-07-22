@@ -13,10 +13,15 @@
   background-color: $background-color;
 
   &__tasks {
-    // height: 511px;
+    padding: 0 10px;
+    height: 100%;
 
     overflow-y: auto;
     scroll-behavior: smooth;
+
+    & > *:not(:last-child) {
+      margin-bottom: 60px;
+    }
   }
 
   /* width */
@@ -34,6 +39,5 @@
   ::-webkit-scrollbar-thumb {
     background: $primary-color;
     border-radius: 10px;
-    margin-left: 10px;
   }
 }

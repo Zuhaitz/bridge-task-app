@@ -19,7 +19,6 @@ const TaskPage = () => {
       <SearchBar />
       <div className="container__tasks">
         <TaskSection text="Tasks to do" tasks={toDo} />
-        <TaskSection text="Tasks to do" tasks={toDo} />
         <TaskSection text="Done" tasks={done} />
       </div>
     </div>
