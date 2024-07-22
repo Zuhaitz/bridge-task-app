@@ -1,0 +1,31 @@
+.task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 432px;
+  height: 75px;
+  padding: 22px;
+  margin-bottom: 16px;
+
+  @include apply-border;
+
+  &__cross-text {
+    color: $primary-color;
+    text-decoration: line-through;
+  }
+
+  &__btn-container {
+    display: flex;
+  }
+
+  &__btn {
+    margin-left: 8px;
+    padding: 4px;
+    @include icon-button($background-color, 22px, 22px);
+
+    &:hover {
+      background-color: $primary-color;
+    }
+  }
+}

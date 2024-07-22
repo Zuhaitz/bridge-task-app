@@ -9,7 +9,7 @@ const TaskSection = ({ text, tasks }) => {
       </p>
       <div>
         {tasks.map((task) => (
-          <Task text={task.text} />
+          <Task task={task} />
         ))}
       </div>
     </div>
