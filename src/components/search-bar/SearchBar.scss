@@ -1,10 +1,12 @@
-@import "../../assets/styles/abstracts/colors";
-
 .search {
   display: flex;
   justify-content: center;
 
   &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     width: 40px;
     height: 40px;
     margin-left: 11px;
