@@ -1,4 +1,4 @@
-.main-tasks {
+.container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -11,4 +11,29 @@
   border-radius: 20px;
 
   background-color: $background-color;
+
+  &__tasks {
+    // height: 511px;
+
+    overflow-y: auto;
+    scroll-behavior: smooth;
+  }
+
+  /* width */
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px $secondary-text-color;
+    border-radius: 10px;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: $primary-color;
+    border-radius: 10px;
+    margin-left: 10px;
+  }
 }

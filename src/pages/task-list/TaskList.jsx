@@ -15,10 +15,13 @@ const TaskPage = () => {
   const done = [{ id: 5, text: "To study React fundamentals", done: true }];
 
   return (
-    <div className="main-tasks">
+    <div className="container">
       <SearchBar />
-      <TaskSection text="Tasks to do" tasks={toDo} />
-      <TaskSection text="Done" tasks={done} />
+      <div className="container__tasks">
+        <TaskSection text="Tasks to do" tasks={toDo} />
+        <TaskSection text="Tasks to do" tasks={toDo} />
+        <TaskSection text="Done" tasks={done} />
+      </div>
     </div>
   );
 };
