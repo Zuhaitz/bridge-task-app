@@ -7,7 +7,10 @@ export default defineConfig({
   css: {
     preprocessorOptions: {
       scss: {
-        additionalData: `@import "./src/assets/styles/abstracts/_colors.scss";`,
+        additionalData: `
+        @import "./src/assets/styles/abstracts/_colors.scss";
+        @import "./src/assets/styles/abstracts/_mixins.scss";
+        `,
       },
     },
   },

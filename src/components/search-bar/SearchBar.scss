@@ -2,6 +2,25 @@
   display: flex;
   justify-content: center;
 
+  &__input {
+    width: 381px;
+    height: 40px;
+    padding: 10px 0;
+    padding-left: 15px;
+
+    @include apply-border;
+
+    ::placeholder {
+      color: $secondary-text-color;
+    }
+
+    //TODO: Correct
+    // :focus {
+    //   border: 2px solid $primary-color;
+    //   border-radius: 10px;
+    // }
+  }
+
   &__btn {
     display: flex;
     justify-content: center;

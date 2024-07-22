@@ -3,11 +3,13 @@
 :root {
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
+  font-size: 16px;
+  line-height: 19.36px;
   font-weight: 400;
   font-style: normal;
 
-  color: white;
-  background-color: black;
+  color: $primary-text-color;
+  background-color: $page-color;
 }
 
 main {
