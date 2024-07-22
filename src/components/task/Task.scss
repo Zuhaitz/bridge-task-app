@@ -10,6 +10,8 @@
 
   @include apply-border;
 
+  background-color: $page-color;
+
   &__cross-text {
     color: $primary-color;
     text-decoration: line-through;
@@ -22,7 +24,7 @@
   &__btn {
     margin-left: 8px;
     padding: 4px;
-    @include icon-button($background-color, 22px, 22px);
+    @include icon-button($page-color, 22px, 22px);
 
     &:hover {
       background-color: $primary-color;
