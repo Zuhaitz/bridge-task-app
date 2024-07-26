@@ -9,13 +9,12 @@ const Task = ({ task, setToDo, setDone }) => {
 
   const handleComplete = () => {
     task.done = true;
-    console.log(task);
+
     setToDo((old) => old.filter((task) => task.id !== id));
     setDone((old) => [task, ...old]);
   };
 
   const handleDelete = () => {
-    console.log(task);
     setToDo((old) => old.filter((task) => task.id !== id));
   };
 
