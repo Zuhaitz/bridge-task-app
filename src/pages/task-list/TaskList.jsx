@@ -1,22 +1,24 @@
-import React from "react";
-import SearchBar from "../../components/search-bar/SearchBar";
+import { useState } from "react";
+import TaskInput from "../../components/task-input/TaskInput";
 import TaskSection from "../../components/task-section/TaskSection";
 
 import "./TaskList.scss";
 
 const TaskPage = () => {
-  const toDo = [
+  const initialValue = [
     { id: 1, text: "To study React fundamentals", done: false },
     { id: 2, text: "To study React fundamentals", done: false },
     { id: 3, text: "To study React fundamentals", done: false },
     { id: 4, text: "To study React fundamentals", done: false },
   ];
 
+  const [toDo, setToDo] = useState(initialValue);
+
   const done = [{ id: 5, text: "To study React fundamentals", done: true }];
 
   return (
     <div className="container">
-      <SearchBar />
+      <TaskInput setToDo={setToDo} />
       <div className="container__tasks">
         <TaskSection text="Tasks to do" tasks={toDo} />
         <TaskSection text="Done" tasks={done} />
