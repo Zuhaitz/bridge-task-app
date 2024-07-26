@@ -18,31 +18,17 @@
       color: $secondary-text-color;
     }
 
-    //TODO: Correct
-    // &:focus {
-    //   border: 2px solid $primary-color;
-    //   border-radius: 10px;
-    // }
+    &:focus {
+      outline: none;
+      border: 2px solid $primary-text-color;
+      border-radius: 10px;
+    }
   }
 
   &__btn {
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
-
     width: 40px;
     height: 40px;
     margin-left: 11px;
     @include icon-button;
-
-    // border: 0;
-    // border-radius: 10px;
-
-    // background-color: $primary-color;
-
-    // img {
-    //   height: 24px;
-    //   width: 24px;
-    // }
   }
 }
