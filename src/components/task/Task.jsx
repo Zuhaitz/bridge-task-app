@@ -7,6 +7,13 @@ import trashIcon from "../../assets/icons/TrashSimple.svg";
 const Task = ({ task, setToDo, setDone }) => {
   const { id, text, done } = task;
 
+  const handleComplete = () => {
+    task.done = true;
+    console.log(task);
+    setToDo((old) => old.filter((task) => task.id !== id));
+    setDone((old) => [task, ...old]);
+  };
+
   const handleDelete = () => {
     console.log(task);
     setToDo((old) => old.filter((task) => task.id !== id));
@@ -18,7 +25,7 @@ const Task = ({ task, setToDo, setDone }) => {
 
       {!done && (
         <div className="task__btn-container">
-          <button className="task__btn">
+          <button onClick={handleComplete} className="task__btn">
             <img src={checkIcon} alt="Mark task as done button" />
           </button>
           <button onClick={handleDelete} className="task__btn">
