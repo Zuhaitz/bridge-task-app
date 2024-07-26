@@ -11,16 +11,23 @@ const TaskPage = () => {
     { id: 3, text: "To study React fundamentals", done: false },
     { id: 4, text: "To study React fundamentals", done: false },
   ];
-
   const [toDo, setToDo] = useState(initialValue);
 
-  const done = [{ id: 5, text: "To study React fundamentals", done: true }];
+  const initialDone = [
+    { id: 5, text: "To study React fundamentals", done: true },
+  ];
+  const [done, setDone] = useState(initialDone);
 
   return (
     <div className="container">
       <TaskInput setToDo={setToDo} />
       <div className="container__tasks">
-        <TaskSection text="Tasks to do" tasks={toDo} />
+        <TaskSection
+          text="Tasks to do"
+          tasks={toDo}
+          setToDo={setToDo}
+          setDone={setDone}
+        />
         <TaskSection text="Done" tasks={done} />
       </div>
     </div>
