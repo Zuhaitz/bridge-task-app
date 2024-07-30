@@ -11,10 +11,10 @@ const TaskInput = ({ setToDo }) => {
 
     if (!task) return;
 
-    setToDo((old) => [
-      ...old,
-      { id: old.at(-1).id + 5, text: task, done: false },
-    ]);
+    setToDo((old) => {
+      const last = old.at(-1);
+      return [...old, { id: last ? last.id + 5 : 1, text: task, done: false }];
+    });
 
     setTask("");
   };
