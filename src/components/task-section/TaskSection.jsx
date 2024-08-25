@@ -11,7 +11,12 @@ const TaskSection = ({ text, tasks, setToDo, setDone }) => {
       </p>
       <div className="task-container__list">
         {tasks.map((task) => (
-          <Task key={task.id} task={task} setToDo={setToDo} setDone={setDone} />
+          <Task
+            key={task._id}
+            task={task}
+            setToDo={setToDo}
+            setDone={setDone}
+          />
         ))}
       </div>
     </div>

@@ -5,24 +5,24 @@ import checkIcon from "../../assets/icons/Check.svg";
 import trashIcon from "../../assets/icons/TrashSimple.svg";
 
 const Task = ({ task, setToDo, setDone }) => {
-  const { id, text, done } = task;
+  const { _id, text, completed } = task;
 
   const handleComplete = () => {
-    task.done = true;
+    task.completed = true;
 
-    setToDo((old) => old.filter((task) => task.id !== id));
+    setToDo((old) => old.filter((task) => task._id !== _id));
     setDone((old) => [task, ...old]);
   };
 
   const handleDelete = () => {
-    setToDo((old) => old.filter((task) => task.id !== id));
+    setToDo((old) => old.filter((task) => task._id !== _id));
   };
 
   return (
     <div className="task">
-      <p className={`${done ? "task__cross-text" : ""}`}>{text}</p>
+      <p className={`${completed ? "task__cross-text" : ""}`}>{text}</p>
 
-      {!done && (
+      {!completed && (
         <div className="task__btn-container">
           <button onClick={handleComplete} className="task__btn">
             <img src={checkIcon} alt="Mark task as done button" />
